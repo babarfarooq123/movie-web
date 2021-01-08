@@ -1,0 +1,38 @@
+@media only screen and (max-width: 760px) {
+    .img {
+        width: 180px;
+        height: 200px;
+    }
+    /* .navText {
+        font-size: 10px;
+    } */
+    .navText {
+        font-size: 0px !important;
+        font-weight: bolder !important;
+        padding: 2px !important;
+    }
+    .abc {
+        margin-right: 2px !important;
+    }
+    .MuiTypography-body1{
+        font-size: 12px !important;
+        font-weight: bold !important;
+    }
+}
+
+.navText {
+    font-size: 80px !important;
+    text-align: center;
+}
+
+.secNavText {
+    margin-right: '10px';
+    margin-left: '10px';
+    /* font-size: 20% !important; */
+    border-bottom: '4px solid #50A8DE' !important;
+}
+
+
+
+
+/* .abc {} */
