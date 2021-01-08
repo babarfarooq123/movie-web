@@ -20,7 +20,7 @@ function Moviedetails() {
         <div className='App' >
             <MovieNav news={news} episode={episode} stats={stats} characters={characters}/>
             {
-                news? <MovieBody />:''
+                news[0]? <MovieBody />:<div></div>
             }
         </div>
     );

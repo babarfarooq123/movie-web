@@ -2,6 +2,7 @@
     .img {
         width: 180px;
         height: 200px;
+        border-radius: 5px !important;
     }
     /* .navText {
         font-size: 10px;
@@ -14,10 +15,22 @@
     .abc {
         margin-right: 2px !important;
     }
-    .MuiTypography-body1{
+    .MuiTypography-body1 {
         font-size: 12px !important;
         font-weight: bold !important;
     }
+    .text {
+        font-size: 13px !important;
+        font-weight: 600 !important;
+    }
+    .trailer {
+        width: auto;
+        height: auto;
+    }
+}
+
+.img {
+    border-radius: 5px !important;
 }
 
 .navText {
@@ -32,7 +45,73 @@
     border-bottom: '4px solid #50A8DE' !important;
 }
 
+.rating-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -80px;
+}
 
+.text {
+    font-size: 16px;
+    font-weight: 600 !important;
+}
+
+.description-movie {
+    padding: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    text-align: justify;
+}
+
+.tags {
+    display: flex;
+    padding: 10px;
+    padding-left: 0px;
+    padding-top: 0px;
+}
+
+.tags p {
+    font-size: 14px;
+    background-color: lightgray;
+    padding: 9px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.time-details {
+    display: flex;
+}
+
+.details-1 {
+    display: block;
+    margin-right: 10px;
+}
+
+.details-2 {
+    display: block;
+    margin-left: 10px;
+}
+
+.trailer-portion {
+    text-align: left;
+    padding-left: 30px;
+}
+
+.trailer {
+    border-radius: 10px;
+}
+
+.related {
+    text-align: left;
+    padding-left: 30px;
+}
+
+.movies-related-title {
+    font-weight: 600;
+    margin-top: -1px;
+}
 
 
 /* .abc {} */
