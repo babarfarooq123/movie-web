@@ -45,113 +45,113 @@ const useStyles = makeStyles((theme) => ({
 export default function Moviebody() {
     const classes = useStyles();
     return (
-        <div>
-            <div className={classes.bodyImage}>
+        <section>
+            <section className={classes.bodyImage}>
               
-                <div className={classes.gradient}/>
-            </div>
+                <section className={classes.gradient}/>
+            </section>
             
-            <div className={classes.mainMovieImg}>
-                <div className={classes.mainMovieImgDiv1}>
+            <section className={classes.mainMovieImg}>
+                <section className={classes.mainMovieImgsection1}>
                     <img className="img" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" width={240} height={260}/>
-                </div>
-                <div className={classes.detail}>
+                </section>
+                <section className={classes.detail}>
                     <h2>Noblesse</h2>
                     <p className=''>Complete<br />
                     <span>2020 fall</span><br />
                     <span>series | 13 episodes | 17+</span>
                     </p>
-                </div>
-            </div>
+                </section>
+            </section>
 
-            <div className="rating-section">
-                <div className="star">
+            <section className="rating-section">
+                <section className="star">
                     <StarIcon className={classes.star}/>
                     <br/>
                     <p><strong>9.0</strong>/10</p>
                     
                     <p>8,335</p>
-                </div>
-                <div className="star">
+                </section>
+                <section className="star">
                     <StarIcon className={classes.star}/>
                     <br/>
                     <p><strong>9.0</strong>/10</p>
                     <p>8,335</p>
-                </div>
-                <div className="star">
+                </section>
+                <section className="star">
                     <StarBorderOutlinedIcon className={classes.starBorder}/>
                     <br/>
                     <p className="text">Add a rating</p>
                     
-                </div>
-                <div className="star">
+                </section>
+                <section className="star">
                     <AddOutlinedIcon className={classes.starBorder}/>
                     <br/>
                     <p className="text">My List</p>
                     
-                </div>
+                </section>
             
-            </div>
+            </section>
 
-            <div className="description-movie">
+            <section className="description-movie">
                 <p>The story revolves around a noble vampire in a contemporary world after 820 years of hibernation. Dangerous adventures with new friends await him, as he uncovers is past and confronts a secret organization.</p>
-                <div className="tags">
+                <section className="tags">
                     <p>Action</p>
                     <p>Uncanny</p>
                     <p>School</p>
                     <p>Vampire</p>
-                </div>
+                </section>
 
-                <div className="time-details">
-                    <div className="details-1">
+                <section className="time-details">
+                    <section className="details-1">
                         <p><strong>Source</strong></p>
                         
                         <p>Web Manga</p>
-                    </div>
-                    <div className="details-2">
+                    </section>
+                    <section className="details-2">
                         <p><strong>Duration of the episode</strong></p>
                     
                         <p>23 minutes</p>
-                    </div>
-                </div>
-                <div className="time-details">
-                    <div className="details-1">
+                    </section>
+                </section>
+                <section className="time-details">
+                    <section className="details-1">
                         <p><strong>Presentation</strong></p>
                         
                         <p>2020-10-08</p>
-                    </div>
-                    <div className="details-2">
+                    </section>
+                    <section className="details-2">
                         <p><strong>To</strong></p>
                     
                         <p>2020-12-31</p>
-                    </div>
-                </div>
-                <div className="time-details">
-                    <div className="details-1">
+                    </section>
+                </section>
+                <section className="time-details">
+                    <section className="details-1">
                         <p><strong>Studio</strong></p>
                         
                         <p>Production I.G</p>
-                    </div>
-                </div>
+                    </section>
+                </section>
 
-            </div>
+            </section>
 
 
-            <div className="trailer-portion">
+            <section className="trailer-portion">
                 <h2>Trailer</h2>
         
                 <iframe className="trailer" width="560" height="315" src="https://www.youtube.com/embed/aSgrNkvqnmc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+            </section>
 
 
-            <div className="related">
+            <section className="related">
                 <h2>Related</h2>
-                <div className="related-movies">
+                <section className="related-movies">
                 <img className="img" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" width={120} height={150}/>
                 <p className="movies-related-title">Movie This</p>
-                </div>
-            </div>
+                </section>
+            </section>
 
-        </div>
+        </section>
     )
 }

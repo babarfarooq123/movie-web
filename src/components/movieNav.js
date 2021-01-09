@@ -19,6 +19,9 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import CommentIcon from '@material-ui/icons/Comment';
 import {Link} from "react-router-dom"
+import ReactDOM from 'react-dom';
+import ReactSwipeNavigation from 'react-swipe-navigation'
+import MovieBody from "../components/movieBody"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -77,7 +80,7 @@ export default function MovieNav({news,episode,stats,characters}) {
             
             {/* <Divider className={classes.divider} /> */}
             {/* 2nd nav */}
-                <List className={classes.secNavList}>
+                {/* <List className={classes.secNavList}>
                     <ListItem className={classes.secNavListItem}>
                         <ListItemText className={news[0]?classes.secNavText:''} onClick={()=>{
                             news[1](true)
@@ -110,9 +113,39 @@ export default function MovieNav({news,episode,stats,characters}) {
                             }}  primary="Charaters and crew" />
                     </ListItem>
                     
-                </List>
+                </List> */}
 
              </AppBar>
+             
+             <ReactSwipeNavigation menu={ ['The News', 'Episode', 'Characters', 'statistics'] } >
+                <div>
+
+                     <section>
+                         <MovieBody />
+                     </section>
+
+                </div>
+                <div></div>
+                <div>
+                {news[1](false)}   
+                     {episode[1](false)}
+                     {characters[1](true)}
+                     {stats[1](false)}
+                </div>
+                <div>
+                {news[1](false)}   
+                     {episode[1](false)}
+                     {characters[1](false)}
+                     {stats[1](true)}
+                </div>
+            </ReactSwipeNavigation>
+            
+
+
+
+
+
+
              </div>
             </div>
     

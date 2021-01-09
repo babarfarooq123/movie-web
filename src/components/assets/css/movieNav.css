@@ -1,0 +1,35 @@
+.carousel div {
+    background: transparent !important;
+    padding-top: 0px !important;
+}
+
+.menu-item {
+    background: transparent !important;
+    color: black !important;
+    border: none !important;
+}
+
+.MuiPaper-elevation4 {
+    box-shadow: none !important;
+}
+
+
+/* .shadow {
+    height: 2px;
+    width: 100%;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important;
+} */
+
+#menu {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.active-menu {
+    border: 1px solid #0B8DDE;
+    border-right: none !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: 4px solid #0B8DDE !important;
+    background: transparent !important;
+    color: #0B8DDE !important;
+}
