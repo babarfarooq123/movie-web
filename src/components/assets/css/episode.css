@@ -1,0 +1,11 @@
+.episode-background {
+    background-color: '#F6F6F6' !important;
+}
+
+.episode-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+}

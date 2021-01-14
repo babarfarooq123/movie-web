@@ -1,27 +1,18 @@
 import React from 'react'
 import "./assets/css/movieNav.css";
 import { makeStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import Avatar from '@material-ui/core/Avatar';
-import ImageIcon from '@material-ui/icons/Image';
-import WorkIcon from '@material-ui/icons/Work';
-import BeachAccessIcon from '@material-ui/icons/BeachAccess';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import { Divider } from '@material-ui/core';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import CommentIcon from '@material-ui/icons/Comment';
 import {Link} from "react-router-dom"
-import ReactDOM from 'react-dom';
 import ReactSwipeNavigation from 'react-swipe-navigation'
 import MovieBody from "../components/movieBody"
+import Episode from "../components/Episode"
+import Statistics from "../components/statistics"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -75,49 +66,11 @@ export default function MovieNav({news,episode,stats,characters}) {
                     <FavoriteBorderIcon className={classes.iconPlace}/>
                     </div>
                     </Toolbar>
-           
-            
-            
-            {/* <Divider className={classes.divider} /> */}
-            {/* 2nd nav */}
-                {/* <List className={classes.secNavList}>
-                    <ListItem className={classes.secNavListItem}>
-                        <ListItemText className={news[0]?classes.secNavText:''} onClick={()=>{
-                            news[1](true)
-                            episode[1](false)
-                            characters[1](false)
-                            stats[1](false)
-                            
-                            }}  primary="The news" />
-                        <ListItemText className={episode[0]?classes.secNavText:''} onClick={()=>{
-                            news[1](false)
-                            episode[1](true)
-                            characters[1](false)
-                            stats[1](false)
-                            
-                            }} primary="Episodes" />
-                        <ListItemText styles={{fontSize: 10}} className={stats[0]?classes.secNavText:''} 
-                        onClick={()=>{
-                            news[1](false)
-                            episode[1](false)
-                            characters[1](false)
-                            stats[1](true)
-                            
-                            }} primary="Statistics" />
-                        <ListItemText className={characters[0]?classes.secNavText:''} onClick={()=>{
-                            news[1](false)
-                            episode[1](false)
-                            characters[1](true)
-                            stats[1](false)
-                            
-                            }}  primary="Charaters and crew" />
-                    </ListItem>
-                    
-                </List> */}
+        
 
              </AppBar>
              
-             <ReactSwipeNavigation menu={ ['The News', 'Episode', 'Characters', 'statistics'] } >
+             <ReactSwipeNavigation menu={ ['The News', 'Episode','statistics','Characters'] } >
                 <div>
 
                      <section>
@@ -125,26 +78,21 @@ export default function MovieNav({news,episode,stats,characters}) {
                      </section>
 
                 </div>
-                <div></div>
                 <div>
-                {news[1](false)}   
-                     {episode[1](false)}
-                     {characters[1](true)}
-                     {stats[1](false)}
+                        <section>
+                            <Episode />
+                        </section>
                 </div>
                 <div>
-                {news[1](false)}   
-                     {episode[1](false)}
-                     {characters[1](false)}
-                     {stats[1](true)}
+                        <section>
+                            <Statistics />
+                        </section>
+                </div>
+                <div>
+           
                 </div>
             </ReactSwipeNavigation>
-            
-
-
-
-
-
+        
 
              </div>
             </div>

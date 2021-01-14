@@ -18,10 +18,7 @@ function Moviedetails() {
 
     return (
         <div className='App' >
-            <MovieNav news={news} episode={episode} stats={stats} characters={characters}/>
-            {
-                news[0]? <MovieBody />:<div></div>
-            }
+            <MovieNav/>
         </div>
     );
 }

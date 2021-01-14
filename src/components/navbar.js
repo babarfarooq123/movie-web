@@ -31,9 +31,10 @@ import ChromeReaderModeOutlinedIcon from '@material-ui/icons/ChromeReaderModeOut
 import SettingsIcon from '@material-ui/icons/Settings';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
+    root1: {
     backgroundColor: 'white',
       flexGrow: 1,
+      boxShadow: '0px 0px 4px rgba(0,0,0,0.5)',
     },
     menuButton: {
       marginRight: theme.spacing(1),
@@ -174,8 +175,8 @@ export default function Navbar() {
     );
 
     return (
-        <div className={classes.root} >
-          <AppBar position="static" className={classes.root}>
+        <div className={classes.root1} >
+          <AppBar position="static" className={classes.root1}>
             <Toolbar>
               <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
 
