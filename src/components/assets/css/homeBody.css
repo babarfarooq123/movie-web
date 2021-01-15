@@ -45,6 +45,8 @@ html {
     font-size: 10px;
 }
 
+.heart-icon {}
+
 .poster-images:hover {
     transform: scale(1.08);
 }

@@ -5,7 +5,7 @@ import Navbar from '../components/navbar';
 function Home() {
   return (
     <div className="App">
-      <Navbar />
+      <Navbar title="latest update"/>
         <Homebody />
     </div>
   );

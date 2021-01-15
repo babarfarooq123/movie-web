@@ -29,6 +29,7 @@ import ExtensionIcon from '@material-ui/icons/Extension';
 import InsertInvitationIcon from '@material-ui/icons/InsertInvitation';
 import ChromeReaderModeOutlinedIcon from '@material-ui/icons/ChromeReaderModeOutlined';
 import SettingsIcon from '@material-ui/icons/Settings';
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root1: {
@@ -58,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     }
   }));
 
-export default function Navbar() {
+export default function Navbar({title}) {
     const classes = useStyles();
     const [state, setState] = React.useState({
       top: false,
@@ -98,11 +99,15 @@ export default function Navbar() {
             <ListItem button>
               {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
               <ListItemIcon><WhatshotIcon /></ListItemIcon>
+              <Link to="/" style={{textDecoration:'none',color:'black'}}>
               <ListItemText primary='Latest updates' />
+              </Link>
             </ListItem>
             <ListItem button>
               <ListItemIcon><ListIcon className={classes.iconColor}/></ListItemIcon>
+              <Link to="/" style={{textDecoration:'none',color:'black'}}>
               <ListItemText primary='Anime list' />
+              </Link>
             </ListItem>
           {/* ))} */}
         </List>
@@ -112,11 +117,15 @@ export default function Navbar() {
               <ListItem button>
                 {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
                 <ListItemIcon><AssessmentIcon /></ListItemIcon>
+                <Link to="/" style={{textDecoration:'none',color:'black'}}>
                 <ListItemText primary='Global assessment' />
+                </Link>
               </ListItem>
               <ListItem button>
                 <ListItemIcon><AssessmentIcon /></ListItemIcon>
+                <Link to="/" style={{textDecoration:'none',color:'black'}}>
                 <ListItemText primary='My list' />
+                </Link>
               </ListItem>
             {/* ))} */}
           </List>
@@ -125,19 +134,19 @@ export default function Navbar() {
           {/* {['All mail', 'Trash', 'Spam'].map((text, index) => ( */}
             <ListItem button>
               <ListItemIcon><AssessmentIcon /></ListItemIcon>
-              <ListItemText primary='My favourite charecters' />
+              <Link to="/login" style={{textDecoration:'none',color:'black'}} ><ListItemText primary='My favourite charecters' /></Link>
             </ListItem>
             <ListItem button>
               <ListItemIcon><FavoriteIcon /></ListItemIcon>
-              <ListItemText primary='Latest views' />
+              <Link to="/login" style={{textDecoration:'none',color:'black'}} ><ListItemText primary='Latest views' /></Link>
             </ListItem>
             <ListItem button>
               <ListItemIcon><FavoriteIcon /></ListItemIcon>
-              <ListItemText primary='My downloads' />
+              <Link to="/login" style={{textDecoration:'none',color:'black'}} ><ListItemText primary='My downloads' /></Link>
             </ListItem>
             <ListItem button>
               <ListItemIcon><QueryBuilderIcon /></ListItemIcon>
-              <ListItemText primary='Latest views' />
+              <Link to="/login" style={{textDecoration:'none',color:'black'}} ><ListItemText primary='Latest views' /></Link>
             </ListItem>
             <ListItem button>
               <ListItemIcon><GetAppIcon /></ListItemIcon>
@@ -153,7 +162,7 @@ export default function Navbar() {
             </ListItem>
             <ListItem button>
               <ListItemIcon><ExtensionIcon /></ListItemIcon>
-              <ListItemText primary='Recommendations' />
+             <Link to="/recommendation" style={{textDecoration:'none',color:'black'}}> <ListItemText primary='Recommendations' /></Link>
             </ListItem>
             <ListItem button>
               <ListItemIcon><InsertInvitationIcon /></ListItemIcon>
@@ -189,10 +198,10 @@ export default function Navbar() {
 
               </IconButton>
               <Typography variant="h6" className={classes.title}>
-                Latest Update
+                {title}
               </Typography>
               <div>
-                <SearchIcon className={classes.iconColor}/>
+                <Link to="/search" style={{textDecoration:'none'}}><SearchIcon className={classes.iconColor}/></Link>
                 <ListIcon className={classes.iconColor}/>
               </div>
             </Toolbar>
