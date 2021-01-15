@@ -1,0 +1,27 @@
+.scrollX {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-left: 10px;
+    overflow-y: initial;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.TextImage {
+    position: relative;
+    bottom: 50px;
+    right: 14px;
+    color: white;
+    font-size: 14px;
+}
+
+.TextImage1 {
+    position: relative;
+    bottom: 68px;
+    right: 14px;
+    color: white;
+    font-size: 12px;
+}

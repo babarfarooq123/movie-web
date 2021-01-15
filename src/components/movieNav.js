@@ -13,6 +13,7 @@ import ReactSwipeNavigation from 'react-swipe-navigation'
 import MovieBody from "../components/movieBody"
 import Episode from "../components/Episode"
 import Statistics from "../components/statistics"
+import Characters from "../components/characters"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -89,7 +90,9 @@ export default function MovieNav({news,episode,stats,characters}) {
                         </section>
                 </div>
                 <div>
-           
+                        <section>
+                            <Characters />
+                        </section>
                 </div>
             </ReactSwipeNavigation>
         
