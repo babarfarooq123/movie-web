@@ -8,7 +8,6 @@ import AddOutlinedIcon from '@material-ui/icons/AddOutlined';
 const useStyles = makeStyles((theme) => ({
     bodyImage: {
       backgroundImage: 'url(https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808)',
-      backgroundSize:'cover',
       backgroundRepeat:'no-repeat',
       backgroundSize:'100% 100%',
       height: '300px',
@@ -53,7 +52,7 @@ export default function Moviebody() {
             
             <section className={classes.mainMovieImg}>
                 <section className={classes.mainMovieImgsection1}>
-                    <img className="img" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" width={240} height={260}/>
+                    <img className="img" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808"  alt="somepicture" width={240} height={260}/>
                 </section>
                 <section className={classes.detail}>
                     <h2>Noblesse</h2>
@@ -140,14 +139,14 @@ export default function Moviebody() {
             <section className="trailer-portion">
                 <h2>Trailer</h2>
         
-                <iframe className="trailer" width="560" height="315" src="https://www.youtube.com/embed/aSgrNkvqnmc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe title="trailer" className="trailer" width="560" height="315" src="https://www.youtube.com/embed/aSgrNkvqnmc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </section>
 
 
             <section className="related">
                 <h2>Related</h2>
                 <section className="related-movies">
-                <img className="img" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" width={120} height={150}/>
+                <img className="img" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture" width={120} height={150}/>
                 <p className="movies-related-title">Movie This</p>
                 </section>
             </section>

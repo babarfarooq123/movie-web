@@ -5,7 +5,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -56,5 +55,5 @@ export default function MediaControlCard() {
       </div>
       
     </Card>
-  )
+  );
 }

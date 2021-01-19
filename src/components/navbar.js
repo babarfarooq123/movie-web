@@ -3,21 +3,17 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-// import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import ListIcon from '@material-ui/icons/List';
 import clsx from 'clsx';
 import Drawer from '@material-ui/core/Drawer';
-// import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import AssessmentIcon from '@material-ui/icons/Assessment';
@@ -91,21 +87,21 @@ export default function Navbar({title}) {
             <ListItemIcon><AccountCircleIcon className={classes.profileImg} /></ListItemIcon>
           </ListItem>
           <ListItem>
-            <ListItemText primary='Click here to login' />
+          <Link  to="/login" style={{textDecoration:'none',color:'black'}}><ListItemText primary='Click here to login' /></Link>
           </ListItem>
         </List>
         <List>
           {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => ( */}
             <ListItem button>
               {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
+              <Link to="/"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}>
               <ListItemIcon><WhatshotIcon /></ListItemIcon>
-              <Link to="/" style={{textDecoration:'none',color:'black'}}>
               <ListItemText primary='Latest updates' />
               </Link>
             </ListItem>
             <ListItem button>
+              <Link to="/"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}>
               <ListItemIcon><ListIcon className={classes.iconColor}/></ListItemIcon>
-              <Link to="/" style={{textDecoration:'none',color:'black'}}>
               <ListItemText primary='Anime list' />
               </Link>
             </ListItem>
@@ -116,14 +112,14 @@ export default function Navbar({title}) {
             {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => ( */}
               <ListItem button>
                 {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
+                <Link to="/" style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}>
                 <ListItemIcon><AssessmentIcon /></ListItemIcon>
-                <Link to="/" style={{textDecoration:'none',color:'black'}}>
                 <ListItemText primary='Global assessment' />
                 </Link>
               </ListItem>
               <ListItem button>
+                <Link to="/"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}>
                 <ListItemIcon><AssessmentIcon /></ListItemIcon>
-                <Link to="/" style={{textDecoration:'none',color:'black'}}>
                 <ListItemText primary='My list' />
                 </Link>
               </ListItem>
@@ -133,20 +129,24 @@ export default function Navbar({title}) {
         <List>
           {/* {['All mail', 'Trash', 'Spam'].map((text, index) => ( */}
             <ListItem button>
+              <Link to="/login"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}} >
               <ListItemIcon><AssessmentIcon /></ListItemIcon>
-              <Link to="/login" style={{textDecoration:'none',color:'black'}} ><ListItemText primary='My favourite charecters' /></Link>
+                <ListItemText primary='My favourite charecters' /></Link>
             </ListItem>
             <ListItem button>
+              <Link to="/login"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}>
               <ListItemIcon><FavoriteIcon /></ListItemIcon>
-              <Link to="/login" style={{textDecoration:'none',color:'black'}} ><ListItemText primary='Latest views' /></Link>
+                <ListItemText primary='Latest views' /></Link>
             </ListItem>
             <ListItem button>
+              <Link to="/login"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}>
               <ListItemIcon><FavoriteIcon /></ListItemIcon>
-              <Link to="/login" style={{textDecoration:'none',color:'black'}} ><ListItemText primary='My downloads' /></Link>
+                <ListItemText primary='My downloads' /></Link>
             </ListItem>
             <ListItem button>
+              <Link to="/login"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}>
               <ListItemIcon><QueryBuilderIcon /></ListItemIcon>
-              <Link to="/login" style={{textDecoration:'none',color:'black'}} ><ListItemText primary='Latest views' /></Link>
+                <ListItemText primary='Latest views' /></Link>
             </ListItem>
             <ListItem button>
               <ListItemIcon><GetAppIcon /></ListItemIcon>
@@ -157,27 +157,33 @@ export default function Navbar({title}) {
         <Divider />
         <List>
             <ListItem button>
+              <Link to="/popular"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}>
               <ListItemIcon><SignalCellularAltIcon /></ListItemIcon>
-              <ListItemText primary='The most popular character' />
+                <ListItemText primary='The most popular character' /></Link>
             </ListItem>
             <ListItem button>
+             <Link to="/recommendation"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}>
               <ListItemIcon><ExtensionIcon /></ListItemIcon>
-             <Link to="/recommendation" style={{textDecoration:'none',color:'black'}}> <ListItemText primary='Recommendations' /></Link>
+               <ListItemText primary='Recommendations' /></Link>
             </ListItem>
+            
             <ListItem button>
+              <Link to="/episode"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}>
               <ListItemIcon><InsertInvitationIcon /></ListItemIcon>
-              <ListItemText primary='Dates of episodes' />
+                <ListItemText primary='Dates of episodes' /></Link>
             </ListItem>
             <ListItem button>
+              <Link  to="/news"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}>
               <ListItemIcon><ChromeReaderModeOutlinedIcon /></ListItemIcon>
-              <ListItemText primary='News' />
+                <ListItemText primary='News' /></Link>
             </ListItem>
         </List>
         <Divider />
         <List>
             <ListItem button>
+              <Link  to="/settings"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}>
               <ListItemIcon><SettingsIcon /></ListItemIcon>
-              <ListItemText primary='Settings' />
+                <ListItemText primary='Settings' /></Link>
             </ListItem>
         </List>
       </div>

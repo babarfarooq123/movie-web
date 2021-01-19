@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
      
 }));
 
-export default function MovieNav({news,episode,stats,characters}) {
+export default function MovieNav() {
     const classes = useStyles();
 
     return (
@@ -63,7 +63,7 @@ export default function MovieNav({news,episode,stats,characters}) {
                         Movie Name
                     </Typography>
                     <div>
-                    <CommentIcon className={classes.iconPlace}/>
+                    <Link to="/comments" style={{textDecoration:'none',color:'black'}}><CommentIcon className={classes.iconPlace}/></Link>
                     <FavoriteBorderIcon className={classes.iconPlace}/>
                     </div>
                     </Toolbar>

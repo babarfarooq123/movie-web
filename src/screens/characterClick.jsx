@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-
 import {Link} from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import "../components/assets/css/movieNav.css";
@@ -14,12 +13,12 @@ import MediaControlCard from '../components/characterCard';
 import StarIcon from '@material-ui/icons/Star';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
+    root3: {
     
-    //   maxWidth: 360,
+
       backgroundColor: 'white',
         color: 'black',
-        // boxShadow: '0 4px 2px -2px gray',
+        borderBottom:'1px solid rgba(0,0,0,0.2)',
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -75,8 +74,8 @@ function Characterclick(){
 
     return(
         <div>
-            <AppBar className={classes.root} position="static">
-                    <Toolbar className={classes.root}>
+            <AppBar className={classes.root3} position="static">
+                    <Toolbar className={classes.root3}>
                         <Link className={classes.link}to="/"><IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                             <ArrowBackIcon />
                         </IconButton></Link>
@@ -122,7 +121,7 @@ function Characterclick(){
                     </Typography> */}
                         <section className={classes.mainMovieImg}>
                             <section className={classes.mainMovieImgsection1}>
-                                <img className="img" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" width={240} height={260}/>
+                                <img className="img" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture" width={240} height={260}/>
                             </section>
                             <section className={classes.detail}>
                                 <h2>Soukou Musume Senki</h2>

@@ -64,7 +64,7 @@ export default function Recommendations() {
                     <Link style={{textDecoration:'none',color:'black'}} to="/movies">
                         <div>
                             <p>Sometext</p>
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p>The movie</p>                   
                         </div>
                         </Link>
@@ -72,7 +72,7 @@ export default function Recommendations() {
                         <Link style={{textDecoration:'none',color:'black'}} to="/movies">
                         <div>
                             <p>Sometext</p>
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p>The movie</p>                   
                         </div>
                         </Link>    
@@ -86,7 +86,7 @@ export default function Recommendations() {
                     <Link style={{textDecoration:'none',color:'black'}} to="/movies">
                         <div>
                             <p>Sometext</p>
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p>The movie</p>                   
                         </div>
                         </Link>
@@ -94,7 +94,7 @@ export default function Recommendations() {
                         <Link style={{textDecoration:'none',color:'black'}} to="/movies">
                         <div>
                             <p>Sometext</p>
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p>The movie</p>                   
                         </div>
                         </Link>    
@@ -107,7 +107,7 @@ export default function Recommendations() {
                         <Link style={{textDecoration:'none',color:'black'}} to="/movies">
                         <div>
                             <p>Sometext</p>
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p>The movie</p>                   
                         </div>
                         </Link>
@@ -115,7 +115,7 @@ export default function Recommendations() {
                         <Link style={{textDecoration:'none',color:'black'}} to="/movies">
                         <div>
                             <p>Sometext</p>
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p>The movie</p>                   
                         </div>
                         </Link> 

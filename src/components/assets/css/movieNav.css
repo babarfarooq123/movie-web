@@ -33,3 +33,55 @@
     background: transparent !important;
     color: #0B8DDE !important;
 }
+
+
+/* character click */
+
+.charDown {
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    justify-content: center;
+}
+
+.charDown-p1 {
+    margin-right: 10px;
+}
+
+.charDown-p2 {
+    margin-left: 10px;
+}
+
+.charTop {
+    /* margin: 0 auto !important; */
+    text-align: center;
+    margin-top: 10px;
+}
+
+.charTop-img1 {
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 760px) {
+    .charTop-img1 {
+        width: 260px;
+        height: 300px;
+    }
+    .charCard {
+        padding-bottom: 10px;
+        width: 70%;
+        margin-left: 10px;
+    }
+}
+
+.charCard {
+    padding-bottom: 10px;
+    max-width: 400px;
+    margin-right: 10px;
+}
+
+.mainCharCard {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}

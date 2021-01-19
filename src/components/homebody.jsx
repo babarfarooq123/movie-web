@@ -12,7 +12,7 @@ function Homebody(){
                 <Link to="/movies" style={{"textDecoration":'none'}}>
                     <div>
                         <div className="imgDiv">
-                            <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                            <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                             <p className="textOnImage">Movie Name</p>
                         </div>
                         <p className="movie-title">Movie Name</p>
@@ -22,7 +22,7 @@ function Homebody(){
                 <Link to="/movies" style={{"textDecoration":'none'}}>
                 <div>
                     <div className="imgDiv">
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p className="textOnImage">Movie Name</p>
                     </div>
                     <p className="movie-title">Movie Name</p>
@@ -32,7 +32,7 @@ function Homebody(){
                 <Link to="/movies" style={{"textDecoration":'none'}}>
                 <div>
                     <div className="imgDiv">
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p className="textOnImage">Movie Name</p>
                     </div>
                     <p className="movie-title">Movie Name</p>
@@ -42,7 +42,7 @@ function Homebody(){
                 <Link to="/movies" style={{"textDecoration":'none'}}>
                 <div>
                     <div className="imgDiv">
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p className="textOnImage">Movie Name</p>
                     </div>
                     <p className="movie-title">Movie Name</p>
@@ -52,7 +52,7 @@ function Homebody(){
                 <Link to="/movies" style={{"textDecoration":'none'}}>
                 <div>
                     <div className="imgDiv">
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p className="textOnImage">Movie Name</p>
                     </div>
                     <p className="movie-title">Movie Name</p>
@@ -62,7 +62,7 @@ function Homebody(){
                 <Link to="/movies" style={{"textDecoration":'none'}}>
                 <div>
                     <div className="imgDiv">
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p className="textOnImage">Movie Name</p>
                     </div>
                     <p className="movie-title">Movie Name</p>
@@ -72,7 +72,7 @@ function Homebody(){
                 <Link to="/movies" style={{"textDecoration":'none'}}>
                 <div>
                     <div className="imgDiv">
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p className="textOnImage">Movie Name</p>
                     </div>
                     <p className="movie-title">Movie Name</p>
@@ -82,7 +82,7 @@ function Homebody(){
                 <Link to="/movies" style={{"textDecoration":'none'}}>
                 <div>
                     <div className="imgDiv">
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p className="textOnImage">Movie Name</p>
                     </div>
                     <p className="movie-title">Movie Name</p>
@@ -92,7 +92,7 @@ function Homebody(){
                 <Link to="/movies" style={{"textDecoration":'none'}}>
                 <div>
                     <div className="imgDiv">
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p className="textOnImage">Movie Name</p>
                     </div>
                     <p className="movie-title">Movie Name</p>
@@ -102,7 +102,7 @@ function Homebody(){
                 <Link to="/movies" style={{"textDecoration":'none'}}>
                 <div>
                     <div className="imgDiv">
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p className="textOnImage">Movie Name</p>
                     </div>
                     <p className="movie-title">Movie Name</p>
@@ -112,7 +112,7 @@ function Homebody(){
                 <Link to="/movies" style={{"textDecoration":'none'}}>
                 <div>
                     <div className="imgDiv">
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p className="textOnImage">Movie Name</p>
                     </div>
                     <p className="movie-title">Movie Name</p>
@@ -122,7 +122,7 @@ function Homebody(){
                 <Link to="/movies" style={{"textDecoration":'none'}}>
                 <div>
                     <div className="imgDiv">
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p className="textOnImage">Movie Name</p>
                     </div>
                     <p className="movie-title">Movie Name</p>
@@ -133,7 +133,7 @@ function Homebody(){
                 <Link to="/movies" style={{"textDecoration":'none'}}>
                 <div>
                     <div className="imgDiv">
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p className="textOnImage">Movie Name</p>
                     </div>
                     <p className="movie-title">Movie Name</p>
@@ -143,7 +143,7 @@ function Homebody(){
                 <Link to="/movies" style={{"textDecoration":'none'}}>
                 <div>
                     <div className="imgDiv">
-                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="image"/>
+                        <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
                         <p className="textOnImage">Movie Name</p>
                     </div>
                     <p className="movie-title">Movie Name</p>
