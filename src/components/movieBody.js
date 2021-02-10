@@ -16,6 +16,23 @@ import { useSpring, animated } from 'react-spring/web.cjs';
 import mal from "./assets/images/mal.png"
 // import {Link} from 'react-router-dom';
 
+import clsx from 'clsx';
+import Drawer from '@material-ui/core/Drawer';
+import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+
+import AddToQueueIcon from '@material-ui/icons/AddToQueue';
+import DesktopWindowsIcon from '@material-ui/icons/DesktopWindows';
+import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
+import PausePresentationIcon from '@material-ui/icons/PausePresentation';
+
+
+
+
 const useStyles = makeStyles((theme) => ({
     bodyImage: {
       backgroundImage: 'url(https://images8.alphacoders.com/756/756781.jpg)',
@@ -70,6 +87,18 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 4, 3),
     },
+    list: {
+        width: 250,
+      },
+      fullList: {
+        width: 'auto',
+
+      },
+      fullList1:{
+        width: 'auto',
+        backgroundColor: '#252E39',
+        color: '#9AA0A6'
+      }
 }));
 
 
@@ -108,6 +137,63 @@ const Fade = React.forwardRef(function Fade(props, ref) {
 export default function Moviebody({darkMode}) {
     const [rating, setRating] = useState(false)
     const classes = useStyles();
+    const [state, setState] = useState({
+        top: false,
+        left: false,
+        bottom: false,
+        right: false,
+      });
+
+
+      //drawer: 
+      const toggleDrawer = (anchor, open) => (event) => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+          return;
+        }
+    
+        setState({ ...state, [anchor]: open });
+      };
+    
+      const list = (anchor) => (
+        <div
+          className={darkMode? clsx(classes.list, {
+            [classes.fullList1]: anchor === 'top' || anchor === 'bottom',
+          }):clsx(classes.list, {
+            [classes.fullList]: anchor === 'top' || anchor === 'bottom',
+          })}
+          role="presentation"
+          onClick={toggleDrawer(anchor, false)}
+          onKeyDown={toggleDrawer(anchor, false)}
+        >
+          <List>
+           
+              <ListItem button>
+                <ListItemIcon> <AddToQueueIcon style={darkMode? {color: '#9AA0A6'}:''} /></ListItemIcon>
+                <ListItemText primary={"I'd like to watch it"} />
+              </ListItem>
+
+              <ListItem button>
+                <ListItemIcon> <PlayCircleOutlineIcon style={darkMode? {color: '#9AA0A6'}:''} /></ListItemIcon>
+                <ListItemText primary={"currently set up"} />
+              </ListItem>
+             <ListItem button>
+                <ListItemIcon> <PausePresentationIcon style={darkMode? {color: '#9AA0A6'}:''} /></ListItemIcon>
+                <ListItemText primary={"pause.."} />
+              </ListItem>
+
+              <ListItem button>
+                <ListItemIcon> <DesktopWindowsIcon style={darkMode? {color: '#9AA0A6'}:''} /></ListItemIcon>
+                <ListItemText primary={"I'd like to watch it"} />
+              </ListItem>
+          </List>
+          <Divider />
+         
+        </div>
+      );
+
+
+
+
 
 
     // const classes = useStyles();
@@ -161,9 +247,12 @@ export default function Moviebody({darkMode}) {
                     
                 </section>
                 <section className="star tagsMar">
-                    <AddOutlinedIcon className={darkMode? classes.starDark:classes.starBorder}/>
+                    <AddOutlinedIcon onClick={toggleDrawer('bottom', true)} className={darkMode? classes.starDark:classes.starBorder}/>
                     {/* <br/> */}
                     <p style={{fontWeight: 600, fontSize: '16px'}}>My List</p>
+                    <Drawer anchor="bottom" open={state['bottom']} onClose={toggleDrawer('bottom', false)}>
+            {list('bottom')}
+          </Drawer>
                     
                 </section>
             

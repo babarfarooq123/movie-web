@@ -2,7 +2,7 @@ import React from 'react';
 import "../components/assets/css/statistics.css";
 import { Doughnut, Bar } from 'react-chartjs-2';
 
-export default function Statistics() {
+export default function Statistics({darkMode}) {
     let color =[
         '#73D490',
         '#91D0EF',
@@ -66,12 +66,12 @@ export default function Statistics() {
 
     return (
         <div className="padding">
-            <div className="chart">
-                <Bar data={dataBar} options={option} />
-            </div>
-            <div className="chart">
-                <Doughnut className="margin-top"  data = {dataProvide} options={optionForDoughNut} />
-            </div>
+            <section className={darkMode? "chart-1":"chart"}>
+                <Bar style={darkMode? {backgroundColor:'#252E39'}:''} data={dataBar} options={option} />
+            </section>
+            <section className={darkMode? "chart-1":"chart"}>
+                <Doughnut  style={darkMode? {backgroundColor:'#252E39'}:''} className="margin-top"  data = {dataProvide} options={optionForDoughNut} />
+            </section>
         </div>
     )
 }

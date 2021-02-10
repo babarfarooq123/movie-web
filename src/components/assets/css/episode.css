@@ -3,6 +3,12 @@
     background: #FAFAFA !important;
 }
 
+.episode-background1 {
+    background-color: #182128 !important;
+    background: #182128 !important;
+    color: white !important;
+}
+
 .episode-grid {
     display: flex;
     justify-content: space-between;
