@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './assets/css/movieBody.css';
 import { makeStyles } from '@material-ui/core/styles';
 import StarIcon from '@material-ui/icons/Star';
 import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined';
 import AddOutlinedIcon from '@material-ui/icons/AddOutlined';
+import {Link} from 'react-router-dom';
+
+// 
+import PropTypes from 'prop-types';
+// import { makeStyles } from '@material-ui/core/styles';
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import { useSpring, animated } from 'react-spring/web.cjs';
+// 
 
 const useStyles = makeStyles((theme) => ({
     bodyImage: {
@@ -42,7 +51,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Moviebody() {
+    const [rating, setRating] = useState(false)
     const classes = useStyles();
+
     return (
         <section>
             <section className={classes.bodyImage}>
@@ -78,7 +89,7 @@ export default function Moviebody() {
                     <p>8,335</p>
                 </section>
                 <section className="star">
-                    <StarBorderOutlinedIcon className={classes.starBorder}/>
+                    <StarBorderOutlinedIcon onCLick={() => setRating(true)} className={classes.starBorder}/>
                     <br/>
                     <p className="text">Add a rating</p>
                     
@@ -95,10 +106,14 @@ export default function Moviebody() {
             <section className="description-movie">
                 <p>The story revolves around a noble vampire in a contemporary world after 820 years of hibernation. Dangerous adventures with new friends await him, as he uncovers is past and confronts a secret organization.</p>
                 <section className="tags">
-                    <p>Action</p>
-                    <p>Uncanny</p>
+                    {/* <p>Action</p> */}
+                    <Link to="/search" style={{textDecoration:'none',color:'black'}}> <p>Action</p></Link>
+                    <Link to="/search" style={{textDecoration:'none',color:'black'}}> <p>Uncanny</p></Link>
+                    <Link to="/search" style={{textDecoration:'none',color:'black'}}> <p>School</p></Link>
+                    <Link to="/search" style={{textDecoration:'none',color:'black'}}> <p>Vampire</p></Link>
+                    {/* <p>Uncanny</p>
                     <p>School</p>
-                    <p>Vampire</p>
+                    <p>Vampire</p> */}
                 </section>
 
                 <section className="time-details">

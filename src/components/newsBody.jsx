@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import '../components/assets/css/news.css';
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -63,7 +64,7 @@ export default function MediaControlCard() {
 
       <div className="newsBtn">
         <p>Almazeed</p>
-        <p>texter</p>
+        <Link to="/newsclick" style={{textDecoration:'none',color:'black'}}><p>texter</p></Link>
       </div>
     </CardContent>
   </div>
