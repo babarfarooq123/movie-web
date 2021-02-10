@@ -9,6 +9,10 @@
     border: none !important;
 }
 
+.menu-1 {
+    background-color: #1B222A !important;
+}
+
 .MuiPaper-elevation4 {
     box-shadow: none !important;
 }
@@ -32,7 +36,7 @@
     border-top: none !important;
     border-bottom: 4px solid #0B8DDE !important;
     background: transparent !important;
-    color: #0B8DDE !important;
+    color: #0B8DDE;
 }
 
 

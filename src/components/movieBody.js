@@ -21,6 +21,10 @@ const useStyles = makeStyles((theme) => ({
         height: '10.4rem',
         backgroundImage: 'linear-gradient( 180deg, transparent, rgba(251, 255, 251, 0.7), #ffff)'
     },
+    darkGradient:{
+        height: '10.4rem',
+        backgroundImage: 'linear-gradient( 180deg, transparent, rgba(24, 33, 40,0.5), #182128)'
+    },
     mainMovieImg: {
         display: 'flex',
         alignItems: 'center',
@@ -41,6 +45,10 @@ const useStyles = makeStyles((theme) => ({
     starBorder:{
         color: 'black',
         fontSize: 40,    
+    },
+    starDark:{
+        color: 'white',
+        fontSize: 40, 
     }
 }));
 
@@ -50,7 +58,7 @@ export default function Moviebody({darkMode}) {
         <section className={darkMode? "body-of-movie-1":"body-of-movie"}>
             <section className={classes.bodyImage}>
               
-                <section className={classes.gradient}/>
+                <section className={darkMode? classes.darkGradient:classes.gradient}/>
             </section>
             
             <section className={classes.mainMovieImg}>
@@ -78,13 +86,13 @@ export default function Moviebody({darkMode}) {
                     <p><strong>9.0</strong>/10<br/>8,335</p>
                 </section>
                 <section className="star tagsMar">
-                    <StarBorderOutlinedIcon className={classes.starBorder}/>
+                    <StarBorderOutlinedIcon className={darkMode? classes.starDark:classes.starBorder}/>
                     {/* <br/> */}
                     <p style={{fontWeight: 600, fontSize: '16px'}}>Add a rating</p>
                     
                 </section>
                 <section className="star tagsMar">
-                    <AddOutlinedIcon className={classes.starBorder}/>
+                    <AddOutlinedIcon className={darkMode? classes.starDark:classes.starBorder}/>
                     {/* <br/> */}
                     <p style={{fontWeight: 600, fontSize: '16px'}}>My List</p>
                     
@@ -92,9 +100,9 @@ export default function Moviebody({darkMode}) {
             
             </section>
 
-            <section className="description-movie">
+            <section className={darkMode? "description-movie-1":"description-movie"}>
                 <p>The story revolves around a noble vampire in a contemporary world after 820 years of hibernation. Dangerous adventures with new friends await him, as he uncovers is past and confronts a secret organization.</p>
-                <section className="tags">
+                <section className={darkMode? "tags-1":"tags"}>
                     {/* <p>Action</p>
                     <p>Uncanny</p>
                     <p>School</p>
@@ -135,7 +143,7 @@ export default function Moviebody({darkMode}) {
                         <p><strong>Studio</strong></p>
                         
                         {/* <p>Production I.G</p> */}
-                        <section className="tags">
+                        <section className={darkMode? "tags-1":"tags"}>
                         <Link to="/search" style={{textDecoration:'none',color:'black'}}> <p>Production I.G</p></Link>
                         </section>
                     </section>

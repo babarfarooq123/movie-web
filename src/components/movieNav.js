@@ -16,6 +16,10 @@ import Statistics from "../components/statistics"
 import Characters from "../components/characters"
 
 const useStyles = makeStyles((theme) => ({
+    rootDark:{ 
+        backgroundColor: '#1b222a',
+        color: 'white',
+    },
     root: {
     
     //   maxWidth: 360,
@@ -59,9 +63,9 @@ export default function MovieNav() {
     let [darkMode, setDarkMode] = useState(true);
 
     return (
-        <div className={classes.root}>
-               <div style={{backgroundColor: 'white', border: '1px solid rgba(0, 0, 0, 0.1)'}}>
-                <AppBar className={classes.root} position="static">
+        <div className={darkMode? classes.rootDark:classes.root}>
+               <div style={{backgroundColor: 'white'}}>
+                <AppBar className={darkMode? classes.rootDark:classes.root} position="static">
                     <Toolbar>
                     <IconButton onClick={()=>window.history.back()} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                         <ArrowBackIcon />
@@ -70,15 +74,15 @@ export default function MovieNav() {
                         Movie Name
                     </Typography>
                     <div>
-                    <Link to="/comments" style={{textDecoration:'none',color:'black'}}><CommentIcon className={classes.iconPlace}/></Link>
+                    <Link to="/comments" style={darkMode? {textDecoration:'none',color:'white'}:{textDecoration:'none',color:'black'}}><CommentIcon className={classes.iconPlace}/></Link>
                     <FavoriteBorderIcon className={classes.iconPlace}/>
                     </div>
                     </Toolbar>
         
 
              </AppBar>
-             <div style={{backgroundColor: '#FAFAFA'}}>
-             <ReactSwipeNavigation menu={ ['The News', 'Episode','statistics','Characters'] } >
+             <div style={darkMode? {backgroundColor: '#182128'}:{backgroundColor: '#FAFAFA'}}>
+             <ReactSwipeNavigation styles={darkMode? "menu-1":"menu"} menu={ ['The News', 'Episode','statistics','Characters'] } >
                 <div>
 
                      <section style={{marginTop:4}}>
