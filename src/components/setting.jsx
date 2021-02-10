@@ -5,7 +5,6 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography'
 import { fade, makeStyles } from '@material-ui/core/styles';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import {Link} from "react-router-dom";
 import Switch from '@material-ui/core/Switch';
 import Divider from "@material-ui/core/Divider";
 
@@ -123,10 +122,11 @@ export default function Setting() {
                             className={classes.menuButton}
                             color="inherit"
                             aria-label="open drawer"
+                            onClick={()=>window.history.back()}
                             >
-                            <Link to="/" style={{textDecoration:'none'}} >
+                            
                             <ArrowBackIcon  />
-                            </Link>
+                          
                             </IconButton>
                             <Typography variant="h6" className={classes.title}>
       Settings

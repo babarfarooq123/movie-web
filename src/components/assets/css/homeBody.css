@@ -43,6 +43,7 @@ html {
     right: 14px;
     color: white;
     font-size: 10px;
+    text-shadow: 1px 1px 2px red;
 }
 
 .heart-icon {}

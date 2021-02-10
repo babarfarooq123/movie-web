@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import "./assets/css/movieNav.css";
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -20,7 +20,13 @@ const useStyles = makeStyles((theme) => ({
     
     //   maxWidth: 360,
       backgroundColor: 'white',
-        color: 'black'
+        color: 'black',
+        // border:'1px solid'
+        // borderLeft: '1px solid grey',
+        // borderRight: '1px solid grey',
+        // borderTop: '0px solid grey',
+        // borderRight: '1px solid grey',
+
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -50,15 +56,16 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MovieNav() {
     const classes = useStyles();
+    let [darkMode, setDarkMode] = useState(true);
 
     return (
         <div className={classes.root}>
-               <div>
+               <div style={{backgroundColor: 'white', border: '1px solid rgba(0, 0, 0, 0.1)'}}>
                 <AppBar className={classes.root} position="static">
                     <Toolbar>
-                    <Link className={classes.link}to="/"><IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                    <IconButton onClick={()=>window.history.back()} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                         <ArrowBackIcon />
-                    </IconButton></Link>
+                    </IconButton>
                     <Typography variant="h6" className={classes.title}>
                         Movie Name
                     </Typography>
@@ -70,32 +77,32 @@ export default function MovieNav() {
         
 
              </AppBar>
-             
+             <div style={{backgroundColor: '#FAFAFA'}}>
              <ReactSwipeNavigation menu={ ['The News', 'Episode','statistics','Characters'] } >
                 <div>
 
-                     <section>
-                         <MovieBody />
+                     <section style={{marginTop:4}}>
+                         <MovieBody darkMode={darkMode}/>
                      </section>
 
                 </div>
-                <div>
-                        <section>
-                            <Episode />
+                <div style={{backgroundColor: '#FAFAFA'}}>
+                        <section style={{marginTop:4}}>
+                            <Episode darkMode={darkMode} />
                         </section>
                 </div>
                 <div>
                         <section>
-                            <Statistics />
+                            <Statistics darkMode={darkMode} />
                         </section>
                 </div>
                 <div>
                         <section>
-                            <Characters />
+                            <Characters darkMode={darkMode} />
                         </section>
                 </div>
-            </ReactSwipeNavigation>
-        
+                </ReactSwipeNavigation>
+            </div>
 
              </div>
             </div>

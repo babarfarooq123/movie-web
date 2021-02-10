@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import '../components/assets/css/news.css';
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,31 +44,66 @@ export default function MediaControlCard() {
 
 
   return (
-    <Card className="root">
-    <CardMedia
-    className="cover"
-    image="https://cdn.myanimelist.net/images/voiceactors/1/54593.jpg"
-    title="Live from space album cover"
-  />
-  <div className={classes.details}>
-    <CardContent className="content">
-      <div>
-        <Typography component="h5" variant="h5">
-          {/* Live From Space */}
-        </Typography>
-        <Typography variant="h5" color="textDark">
-          Texter texter texter
-        </Typography>
-        <p>lorem text lorem text lorem text lorem text lorem text lorem text</p>
-      </div>
+//     <Card className="root">
+//     <CardMedia
+//     className="cover"
+//     image="https://cdn.myanimelist.net/images/voiceactors/1/54593.jpg"
+//     title="Live from space album cover"
+//   />
+//   <div className={classes.details}>
+//     <CardContent className="content">
+//       <div>
+//         <Typography component="h5" variant="h5">
+//           {/* Live From Space */}
+//         </Typography>
+//         <Typography variant="h5" color="textDark">
+//           Texter texter texter
+//         </Typography>
+//         <p>lorem text lorem text lorem text lorem text lorem text lorem text</p>
+//       </div>
 
-      <div className="newsBtn">
-        <p>Almazeed</p>
-        <p>texter</p>
-      </div>
-    </CardContent>
+//       <div className="newsBtn">
+//         <p>Almazeed</p>
+//         <Link to="/newsclick" style={{textDecoration:'none',color:'black'}}><p>texter</p></Link>
+//       </div>
+//     </CardContent>
+//   </div>
+  
+// </Card>
+
+
+
+
+<Card className="root">
+<CardMedia
+className="cover1"
+image="https://cdn.myanimelist.net/images/voiceactors/1/54593.jpg"
+title="Live from space album cover"
+/>
+<div className={classes.details}>
+<CardContent className="content">
+  <div>
+    {/* <Typography component="h5" variant="h5"> */}
+      {/* Live From Space */}
+    {/* </Typography> */}
+    {/* <Typography variant="h5" color="textDark">
+      Texter texter texter
+    </Typography> */}
+    <p className="text">lorem text lorem text lorem text lorem text lorem text lorem text
+    lorem text lorem text lorem text lorem text lorem text lorem text
+    </p>
+  </div>
+
+  <div className="newsBtn1">
+    <p>Almazeed</p>
+    <Link to="/newsclick" style={{textDecoration:'none',color:'black', marginLeft: 30}}><p>texter</p></Link>
   </div>
   
+  {/* <p style={{margin: 'auto'}}>texttttt</p> */}
+</CardContent>
+</div>
+
+
 </Card>
   );
 }

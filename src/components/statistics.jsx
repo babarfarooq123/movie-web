@@ -66,14 +66,12 @@ export default function Statistics() {
 
     return (
         <div className="padding">
-               <Bar
-          data={dataBar}
-          width={100}
-          height={50}
-          options={option}
-        />
-            <Doughnut className="margin-top" data = {dataProvide} options={optionForDoughNut} />
-         
+            <div className="chart">
+                <Bar data={dataBar} options={option} />
+            </div>
+            <div className="chart">
+                <Doughnut className="margin-top"  data = {dataProvide} options={optionForDoughNut} />
+            </div>
         </div>
     )
 }

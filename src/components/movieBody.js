@@ -4,18 +4,21 @@ import { makeStyles } from '@material-ui/core/styles';
 import StarIcon from '@material-ui/icons/Star';
 import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined';
 import AddOutlinedIcon from '@material-ui/icons/AddOutlined';
+import mal from "./assets/images/mal.png"
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     bodyImage: {
-      backgroundImage: 'url(https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808)',
+      backgroundImage: 'url(https://images8.alphacoders.com/756/756781.jpg)',
       backgroundRepeat:'no-repeat',
-      backgroundSize:'100% 100%',
-      height: '300px',
+      backgroundSize:'cover',
+      backgroundPosition:'center center',
+      height: '160px',
       opacity: 0.5,
       zIndex: 1
     },
     gradient:{
-        height: '19.4rem',
+        height: '10.4rem',
         backgroundImage: 'linear-gradient( 180deg, transparent, rgba(251, 255, 251, 0.7), #ffff)'
     },
     mainMovieImg: {
@@ -41,10 +44,10 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function Moviebody() {
+export default function Moviebody({darkMode}) {
     const classes = useStyles();
     return (
-        <section>
+        <section className={darkMode? "body-of-movie-1":"body-of-movie"}>
             <section className={classes.bodyImage}>
               
                 <section className={classes.gradient}/>
@@ -52,9 +55,9 @@ export default function Moviebody() {
             
             <section className={classes.mainMovieImg}>
                 <section className={classes.mainMovieImgsection1}>
-                    <img className="img" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808"  alt="somepicture" width={240} height={260}/>
+                    <img className="img" src="https://media.kitsu.io/anime/poster_images/2/large.jpg?1597696808"  alt="somepicture" width={150} height={200}/>
                 </section>
-                <section className={classes.detail}>
+                <section className="makeStyles">
                     <h2>Noblesse</h2>
                     <p className=''>Complete<br />
                     <span>2020 fall</span><br />
@@ -66,27 +69,24 @@ export default function Moviebody() {
             <section className="rating-section">
                 <section className="star">
                     <StarIcon className={classes.star}/>
-                    <br/>
-                    <p><strong>9.0</strong>/10</p>
-                    
-                    <p>8,335</p>
+                    {/* <br/> */}
+                    <p><strong>9.0</strong>/10<br/>8,335</p>
                 </section>
                 <section className="star">
-                    <StarIcon className={classes.star}/>
-                    <br/>
-                    <p><strong>9.0</strong>/10</p>
-                    <p>8,335</p>
+                    <img src={mal} alt="mal" style={{width:40,height:40}} className={classes.star}/>
+                    {/* <br/> */}
+                    <p><strong>9.0</strong>/10<br/>8,335</p>
                 </section>
-                <section className="star">
+                <section className="star tagsMar">
                     <StarBorderOutlinedIcon className={classes.starBorder}/>
-                    <br/>
-                    <p className="text">Add a rating</p>
+                    {/* <br/> */}
+                    <p style={{fontWeight: 600, fontSize: '16px'}}>Add a rating</p>
                     
                 </section>
-                <section className="star">
+                <section className="star tagsMar">
                     <AddOutlinedIcon className={classes.starBorder}/>
-                    <br/>
-                    <p className="text">My List</p>
+                    {/* <br/> */}
+                    <p style={{fontWeight: 600, fontSize: '16px'}}>My List</p>
                     
                 </section>
             
@@ -95,10 +95,15 @@ export default function Moviebody() {
             <section className="description-movie">
                 <p>The story revolves around a noble vampire in a contemporary world after 820 years of hibernation. Dangerous adventures with new friends await him, as he uncovers is past and confronts a secret organization.</p>
                 <section className="tags">
-                    <p>Action</p>
+                    {/* <p>Action</p>
                     <p>Uncanny</p>
                     <p>School</p>
-                    <p>Vampire</p>
+                    <p>Vampire</p> */}
+                    <Link to="/search" style={{textDecoration:'none',color:'black'}}> <p>Action</p></Link>
+                    <Link to="/search" style={{textDecoration:'none',color:'black'}}> <p>Uncanny</p></Link>
+                    <Link to="/search" style={{textDecoration:'none',color:'black'}}> <p>School</p></Link>
+                    <Link to="/search" style={{textDecoration:'none',color:'black'}}> <p>Vampire</p></Link>
+                    
                 </section>
 
                 <section className="time-details">
@@ -129,7 +134,10 @@ export default function Moviebody() {
                     <section className="details-1">
                         <p><strong>Studio</strong></p>
                         
-                        <p>Production I.G</p>
+                        {/* <p>Production I.G</p> */}
+                        <section className="tags">
+                        <Link to="/search" style={{textDecoration:'none',color:'black'}}> <p>Production I.G</p></Link>
+                        </section>
                     </section>
                 </section>
 
@@ -145,10 +153,19 @@ export default function Moviebody() {
 
             <section className="related">
                 <h2>Related</h2>
-                <section className="related-movies">
+                {/* <section className="related-movies">
                 <img className="img" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture" width={120} height={150}/>
                 <p className="movies-related-title">Movie This</p>
-                </section>
+                </section> */}
+                <section>
+                        <section>
+                            <img className="poster-images" src="https://media.kitsu.io/anime/poster_images/2/medium.jpg?1597696808" alt="somepicture"/>
+       
+                            <p className="textOnImage-1">Movie Name</p>
+                        </section>
+                        <p className="movie-title">Movie Name</p>
+                        <p className="rating">Rating: <span> < StarIcon style={{color: '#FF9200', fontSize: 18,marginBottom:-3}}/> 6.05</span></p>
+                    </section>
             </section>
 
         </section>

@@ -4,6 +4,7 @@
     overflow-x: auto;
     padding-left: 10px;
     overflow-y: initial;
+    justify-content: flex-end;
 }
 
 ::-webkit-scrollbar {
