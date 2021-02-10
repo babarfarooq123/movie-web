@@ -1,10 +1,12 @@
 import React, {useRef} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
+import './assets/css/episodeSlide.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
+    // color: 'white'
   },
   margin: {
     height: theme.spacing(3),
@@ -33,11 +35,11 @@ export default function DiscreteSlider() {
 //   console.log(r.current)
 
   return (
-    <div className={classes.root}>
+    <div style={{color: 'white', width: '250px'}}>
       {/* <Typography id="discrete-slider-always" gutterBottom>
         Always visible
       </Typography> */}
-      <Slider ref={r} 
+      <Slider style={{textColor: 'white'}} ref={r} 
         defaultValue={2}
         getAriaValueText={valuetext/10}
         aria-labelledby="discrete-slider-always"
