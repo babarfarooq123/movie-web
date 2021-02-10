@@ -5,11 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import '../components/assets/css/news.css';
-<<<<<<< HEAD
-import {Link} from "react-router-dom";
-=======
 import {Link} from 'react-router-dom';
->>>>>>> 07c8b66cc171e068d0b2eba91861bf6bf0cbafc7
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -66,13 +62,6 @@ export default function MediaControlCard() {
 //         <p>lorem text lorem text lorem text lorem text lorem text lorem text</p>
 //       </div>
 
-<<<<<<< HEAD
-      <div className="newsBtn">
-        <p>Almazeed</p>
-        <Link to="/newsclick" style={{textDecoration:'none',color:'black'}}><p>texter</p></Link>
-      </div>
-    </CardContent>
-=======
 //       <div className="newsBtn">
 //         <p>Almazeed</p>
 //         <Link to="/newsclick" style={{textDecoration:'none',color:'black'}}><p>texter</p></Link>
@@ -108,7 +97,6 @@ title="Live from space album cover"
   <div className="newsBtn1">
     <p>Almazeed</p>
     <Link to="/newsclick" style={{textDecoration:'none',color:'black', marginLeft: 30}}><p>texter</p></Link>
->>>>>>> 07c8b66cc171e068d0b2eba91861bf6bf0cbafc7
   </div>
   
   {/* <p style={{margin: 'auto'}}>texttttt</p> */}

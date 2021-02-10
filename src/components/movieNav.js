@@ -82,7 +82,7 @@ export default function MovieNav() {
 
              </AppBar>
              <div style={darkMode? {backgroundColor: '#182128'}:{backgroundColor: '#FAFAFA'}}>
-             <ReactSwipeNavigation styles={darkMode? "menu-1":"menu"} menu={ ['The News', 'Episode','statistics','Characters'] } >
+             <ReactSwipeNavigation className={darkMode?'menu-item':''} styles={darkMode? "menu-1":"menu"} menu={ ['The News', 'Episode','statistics','Characters'] } >
                 <div>
 
                      <section style={{marginTop:4}}>
