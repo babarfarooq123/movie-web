@@ -13,6 +13,10 @@ import EpisodeClick from "../../../screens/episodeClick"
 import EpisodeChat from "../../../screens/episodeChat"
 import News from "../../../screens/news"
 import Settings from "../../../screens/settings"
+<<<<<<< HEAD
+=======
+import Profile from "../../profile"
+>>>>>>> 07c8b66cc171e068d0b2eba91861bf6bf0cbafc7
 import Newsclick from "../../../screens/newsClick"
 
 export default function RouteApp() {
@@ -32,6 +36,10 @@ export default function RouteApp() {
             <Route exact path="/comments" component={EpisodeChat} />
             <Route exact path="/news" component={News} />
             <Route exact path="/settings" component={Settings} />
+<<<<<<< HEAD
+=======
+            <Route exact path="/profile" component={Profile} />
+>>>>>>> 07c8b66cc171e068d0b2eba91861bf6bf0cbafc7
             <Route exact path="/newsclick" component={Newsclick} />
         </Switch>
     </Router>

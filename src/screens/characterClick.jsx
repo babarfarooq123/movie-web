@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import {Link} from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import "../components/assets/css/movieNav.css";
 import FavoriteIcon from '@material-ui/icons/Favorite';
@@ -76,9 +75,9 @@ function Characterclick(){
         <div>
             <AppBar className={classes.root3} position="static">
                     <Toolbar className={classes.root3}>
-                        <Link className={classes.link}to="/"><IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                        <IconButton onClick={()=>window.history.back()} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                             <ArrowBackIcon />
-                        </IconButton></Link>
+                        </IconButton>
                         <Typography variant="h6" className={classes.title}>
                             Matsuno, Juushimatsu
                         </Typography>

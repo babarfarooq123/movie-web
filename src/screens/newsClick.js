@@ -43,9 +43,15 @@ function Newsclick(){
         <div>
             <AppBar className={classes.root1} position="static">
                 <Toolbar className={classes.root1}>
+<<<<<<< HEAD
                     <Link className={classes.link} to="/"><IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                         <ArrowBackIcon />
                     </IconButton></Link>
+=======
+                   <IconButton onClick={()=>window.history.back()} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                        <ArrowBackIcon />
+                    </IconButton>
+>>>>>>> 07c8b66cc171e068d0b2eba91861bf6bf0cbafc7
                     <Typography variant="h6" className={classes.title}>
                         News click
                     </Typography>

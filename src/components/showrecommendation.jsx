@@ -74,14 +74,15 @@ export default function Showrecommendation() {
         <AppBar className={classes.root1} position="static">
           <Toolbar>
             <IconButton
+            onClick={()=>window.history.back()}
               edge="start"
               className={classes.menuButton}
               color="inherit"
               aria-label="open drawer"
             >
-              <Link to="/" style={{textDecoration:'none'}} >
+             
               <ArrowBackIcon  />
-              </Link>
+              
             </IconButton>
             
           </Toolbar>

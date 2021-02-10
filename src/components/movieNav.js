@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import "./assets/css/movieNav.css";
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -16,11 +16,21 @@ import Statistics from "../components/statistics"
 import Characters from "../components/characters"
 
 const useStyles = makeStyles((theme) => ({
+    rootDark:{ 
+        backgroundColor: '#1b222a',
+        color: 'white',
+    },
     root: {
     
     //   maxWidth: 360,
       backgroundColor: 'white',
-        color: 'black'
+        color: 'black',
+        // border:'1px solid'
+        // borderLeft: '1px solid grey',
+        // borderRight: '1px solid grey',
+        // borderTop: '0px solid grey',
+        // borderRight: '1px solid grey',
+
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -50,52 +60,53 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MovieNav() {
     const classes = useStyles();
+    let [darkMode, setDarkMode] = useState(true);
 
     return (
-        <div className={classes.root}>
-               <div>
-                <AppBar className={classes.root} position="static">
+        <div className={darkMode? classes.rootDark:classes.root}>
+               <div style={{backgroundColor: 'white'}}>
+                <AppBar className={darkMode? classes.rootDark:classes.root} position="static">
                     <Toolbar>
-                    <Link className={classes.link}to="/"><IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                    <IconButton onClick={()=>window.history.back()} edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                         <ArrowBackIcon />
-                    </IconButton></Link>
+                    </IconButton>
                     <Typography variant="h6" className={classes.title}>
                         Movie Name
                     </Typography>
                     <div>
-                    <Link to="/comments" style={{textDecoration:'none',color:'black'}}><CommentIcon className={classes.iconPlace}/></Link>
+                    <Link to="/comments" style={darkMode? {textDecoration:'none',color:'white'}:{textDecoration:'none',color:'black'}}><CommentIcon className={classes.iconPlace}/></Link>
                     <FavoriteBorderIcon className={classes.iconPlace}/>
                     </div>
                     </Toolbar>
         
 
              </AppBar>
-             
-             <ReactSwipeNavigation menu={ ['The News', 'Episode','statistics','Characters'] } >
+             <div style={darkMode? {backgroundColor: '#182128'}:{backgroundColor: '#FAFAFA'}}>
+             <ReactSwipeNavigation styles={darkMode? "menu-1":"menu"} menu={ ['The News', 'Episode','statistics','Characters'] } >
                 <div>
 
-                     <section>
-                         <MovieBody />
+                     <section style={{marginTop:4}}>
+                         <MovieBody darkMode={darkMode}/>
                      </section>
 
                 </div>
-                <div>
-                        <section>
-                            <Episode />
+                <div style={{backgroundColor: '#FAFAFA'}}>
+                        <section style={{marginTop:4}}>
+                            <Episode darkMode={darkMode} />
                         </section>
                 </div>
                 <div>
                         <section>
-                            <Statistics />
+                            <Statistics darkMode={darkMode} />
                         </section>
                 </div>
                 <div>
                         <section>
-                            <Characters />
+                            <Characters darkMode={darkMode} />
                         </section>
                 </div>
-            </ReactSwipeNavigation>
-        
+                </ReactSwipeNavigation>
+            </div>
 
              </div>
             </div>

@@ -7,7 +7,7 @@ import {Link} from "react-router-dom"
 export default function Episode() {
     let array = ['1','2','3','4','5','6'];
     return (
-        <div className="episode-background">
+        <section className="episode-background" style={{backgroundColor: '#FAFAFA',flex:1}}>
             {
                 array.map((element,index)=>
                 <div className="episode-grid">
@@ -23,6 +23,6 @@ export default function Episode() {
             
                 )
             }
-        </div>
+        </section>
     )
 }

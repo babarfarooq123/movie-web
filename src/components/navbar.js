@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import ListIcon from '@material-ui/icons/List';
@@ -25,7 +24,9 @@ import ExtensionIcon from '@material-ui/icons/Extension';
 import InsertInvitationIcon from '@material-ui/icons/InsertInvitation';
 import ChromeReaderModeOutlinedIcon from '@material-ui/icons/ChromeReaderModeOutlined';
 import SettingsIcon from '@material-ui/icons/Settings';
+import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
 import {Link} from "react-router-dom";
+
 
 const useStyles = makeStyles((theme) => ({
     root1: {
@@ -52,7 +53,16 @@ const useStyles = makeStyles((theme) => ({
     },
     profileImg: {
       fontSize: '60px'
-    }
+    },
+    paper: {
+      position: 'absolute',
+      width: '80%',
+      backgroundColor: theme.palette.background.paper,
+      boxShadow: theme.shadows[5],
+      padding: theme.spacing(2, 4, 3),
+      marginLeft:'auto',
+      marginRight:'auto'
+    },
   }));
 
 export default function Navbar({title}) {
@@ -92,13 +102,42 @@ export default function Navbar({title}) {
         </List>
         <List>
           {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => ( */}
-            <ListItem button>
+
+
+          
+            {/* <ListItem button> */}
               {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
+              {/* <Link to="/"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}>
+              <ListItemIcon><WhatshotIcon /></ListItemIcon>
+              <ListItemText primary='Latest updates' />
+              </Link>
+            </ListItem> */}
+
+{
+            title == "lastest update" ? <ListItem button style={{backgroundColor:'#E0F2FC'}}>
+            {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
+            {/* <Link to="/"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}> */}
+            <Link to="/"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}>
+            <ListItemIcon><WhatshotIcon style={{color:'#0E96EB'}}/></ListItemIcon>
+            <ListItemText primary='Latest updates' style={{color:'#0E96EB'}} />
+            </Link>
+            
+          </ListItem>:<ListItem button>
+            
+              {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
+              {/* <Link to="/"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}> */}
               <Link to="/"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}>
               <ListItemIcon><WhatshotIcon /></ListItemIcon>
               <ListItemText primary='Latest updates' />
               </Link>
             </ListItem>
+          }
+
+
+
+
+
+
             <ListItem button>
               <Link to="/"  style={{textDecoration:'none',color:'black',display:'flex',justifyContent:'space-between'}}>
               <ListItemIcon><ListIcon className={classes.iconColor}/></ListItemIcon>
@@ -193,8 +232,7 @@ export default function Navbar({title}) {
         <div className={classes.root1} >
           <AppBar position="static" className={classes.root1}>
             <Toolbar>
-              <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-
+            
                 <div>
                     <MenuIcon onClick={toggleDrawer('left', true)} className={classes.iconColor}/>
                     <Drawer anchor={'left'} open={state['left']} onClose={toggleDrawer('left', false)}>
@@ -202,13 +240,15 @@ export default function Navbar({title}) {
                     </Drawer>
                 </div>
 
-              </IconButton>
+              
               <Typography variant="h6" className={classes.title}>
                 {title}
               </Typography>
               <div>
                 <Link to="/search" style={{textDecoration:'none'}}><SearchIcon className={classes.iconColor}/></Link>
                 <ListIcon className={classes.iconColor}/>
+                <ErrorOutlineIcon style={{color:'red',transform: 'rotate(180deg)'}}/>
+              
               </div>
             </Toolbar>
           </AppBar>
