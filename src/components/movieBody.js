@@ -5,6 +5,7 @@ import StarIcon from '@material-ui/icons/Star';
 import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined';
 import AddOutlinedIcon from '@material-ui/icons/AddOutlined';
 import {Link} from 'react-router-dom';
+import DiscreteSlider from './episodeSlid';
 
 // 
 import PropTypes from 'prop-types';
@@ -80,12 +81,16 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        // backgroundColor: '#252E39',
       },
       paper: {
         backgroundColor: theme.palette.background.paper,
         border: '2px solid #000',
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 4, 3),
+        textAlign: 'right',
+        backgroundColor: '#252E39',
+        color: 'white',
     },
     list: {
         width: 250,
@@ -353,8 +358,11 @@ export default function Moviebody({darkMode}) {
                     <div className={classes.paper}>
                       <h2 id="spring-modal-title">Rating modal</h2>
                       <p id="spring-modal-description">Rating 1</p>
+                      <DiscreteSlider />
                       <p id="spring-modal-description">Rating 2</p>
+                      <DiscreteSlider />
                       <p id="spring-modal-description">Rating 3</p>
+                      <DiscreteSlider />
                     </div>
                   </Fade>
                 </Modal>

@@ -20,9 +20,9 @@ export default function RouteApp() {
   return (
     <Router>
         <Switch>
-            <Route exact path="/" component={Home} />
+            {/* <Route exact path="/" component={Home} /> */}
+            <Route exact path="/" component={MovieDetails} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/movies" component={MovieDetails} />
             <Route exact path="/characterclick" component={Characterclick} />
             <Route exact path="/search" component={SearchBar} />
             <Route exact path="/login" component={Login} />
