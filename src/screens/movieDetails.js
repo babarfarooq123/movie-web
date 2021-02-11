@@ -4,7 +4,7 @@ import '../components/assets/css/movieDetail.css';
 
 function Moviedetails() {
     return (
-        <div className='App rootmain' style={{paddingRight:'15%',paddingLeft:'15%'}}>
+        <div className='App rootmain' >
             <MovieNav />
         </div>
     );

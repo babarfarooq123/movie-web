@@ -226,8 +226,8 @@ export default function Moviebody({darkMode}) {
                     <img className="img" src="https://media.kitsu.io/anime/poster_images/2/large.jpg?1597696808"  alt="somepicture" width={150} height={200}/>
                 </section>
                 <section className="makeStyles">
-                    <h2>Noblesse</h2>
-                    <p className=''>Complete<br />
+                    <h2 className="header">Noblesse</h2>
+                    <p className='headerCont'>Complete<br />
                     <span>2020 fall</span><br />
                     <span>series | 13 episodes | 17+</span>
                     </p>
